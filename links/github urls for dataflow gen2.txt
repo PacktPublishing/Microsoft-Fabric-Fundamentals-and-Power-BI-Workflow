@@ -1,0 +1,14 @@
+Note:
+I have also attached the files in the resources for you. In the course we use the files with the below provided urls
+
+
+Github links:
+https://raw.githubusercontent.com/Zooshi/fabric/refs/heads/main/Transactiondata.json
+
+https://raw.githubusercontent.com/Zooshi/fabric/52eb2db48c036d32088547c994fe6b528267c3db/RegionDictionary.xlsx
+
+https://raw.github.com/Zooshi/fabric/1772c21c4a488c80ed65651c5f82861f2203d65c/SalesRep.xlsx
+
+
+Exchange rate:
+https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml

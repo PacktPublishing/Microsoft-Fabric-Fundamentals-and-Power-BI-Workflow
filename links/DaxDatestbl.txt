@@ -1,0 +1,33 @@
+dim_date = 
+    VAR minYear = 2022 // YEAR ( MIN( myfactTable[Date] ))    // enter your fact table here
+    VAR maxYear = 2023 // YEAR ( MAX( myfactTable[Date] ))
+RETURN
+    ADDCOLUMNS (
+        FILTER (
+            CALENDARAUTO(),
+            AND ( YEAR ( [Date] ) >= minYear, YEAR ( [Date] ) <= maxYear )
+        ),
+    "Year", YEAR ( [Date] ),
+    //"Year Month", FORMAT ( [Date], "yyyy-mm" ),
+    "Quarter Name","Q" & FORMAT( [Date], "Q" ),
+    "Week of Year", WEEKNUM( [Date], 21 ),
+    "Mon", FORMAT ( [Date], "mmm" ),
+    "Month", FORMAT ( [Date], "mmmm" ),
+    "Month Sort", MONTH ( [Date] ),
+    // "End of Month", EOMONTH( [Date], 0 ),
+    "Day", FORMAT ( [Date], "d" ),
+    "Calendar Week", WEEKNUM ( [Date] , 21)
+    // "minYear", minYear,
+    // "maxYear", maxYear
+/*
+  "Day", DAY([Date]),
+    "Start of Week", [Date]-WEEKDAY([Date])+1,
+    "Month",MONTH([Date]),
+    "Month Name",FORMAT([Date],"MMM"),
+    "Start of Month",DATE( YEAR([Date]), MONTH([Date]), 1),
+    "Quarter Name","Q"&FORMAT([Date],"Q"),
+    "Week of Year",WEEKNUM([Date],21),
+    "Year",YEAR([Date])
+*/
+
+    )
